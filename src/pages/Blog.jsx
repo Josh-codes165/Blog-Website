@@ -1,22 +1,6 @@
 import blogs from "../data/Blogs"
 import { Link } from "react-router-dom"
 
-// function Blogs() {
-//     return (
-//         <div>
-//             <div className="blog-container">{blogs.map((blog) => (
-//                     <div key={blog.id}  className="blog-div">
-//                         <h3>{blog.title}</h3>
-//                         <Link to={`/blogs/${blog.id}`}>Read More</Link>
-//                     </div>
-//                 ))}
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Blogs
-
 function Blogs() {
   return (
     <div>

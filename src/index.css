@@ -60,6 +60,20 @@ nav a {
 nav a:hover {
   color: var(--primary);
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
+}
 
 /* Hero Section */
 .home {
@@ -164,4 +178,27 @@ nav a:hover {
   nav { padding: 1rem 5%; }
   .home h1 { font-size: 3rem; }
   .blog-container { padding: 40px 5%; }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px; 
+    left: -100%; 
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+  }
+
+  .nav-links.active {
+    left: 0; 
+  }
 }

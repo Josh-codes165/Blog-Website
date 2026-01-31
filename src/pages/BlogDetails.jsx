@@ -1,21 +1,6 @@
 import { useParams } from "react-router-dom";
 import blogs from "../data/Blogs";
 
-// function BlogDetails() {
-//   const { id } = useParams();
-//   const blog = blogs.find((b) => b.id === id);
-
-//   if (!blog) {
-//     return <h2>Blog Not Found</h2>;
-//   }
-//   return (
-//     <div className="blogDetails">
-//       <h2 className="blogTitle">{blog.title}</h2>
-//       <p>{blog.content}</p>
-//     </div>
-//   );
-// }
-
 function BlogDetails() {
   const { id } = useParams();
   const blog = blogs.find((b) => b.id === id);
