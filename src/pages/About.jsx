@@ -1,7 +1,23 @@
+import { useNavigate } from "react-router-dom";
+
 function About() {
+
+  const Navigate = useNavigate()
   return (
     <>
       <div className="blogDetails">
+        <button
+        style={{
+          marginBottom: "10px",
+          padding: "3px 10px",
+          fontSize: "1.2rem",
+          borderRadius: "5px",
+          border: "1px solid var(--primary)",
+        }}
+        onClick={() => Navigate(-1)}
+      >
+        ←
+      </button>
         <h3 className="blogTitle">About The Daily Pivot</h3>
         <p>
           Welcome to The Daily Pivot, a digital space dedicated to navigating
