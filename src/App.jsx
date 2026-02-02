@@ -1,20 +1,26 @@
+import React from "react";
+import { Suspense } from "react";
+import Suspenses from "./Components/Suspenses";
 import { Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import BlogDetails from "./pages/BlogDetails";
-import NavBar from "./Components/NavBar";
-import Home from "./pages/Home";
+const About = React.lazy(() => import ("./pages/About"))
+const Blog = React.lazy(() => import ("./pages/Blog"))
+const BlogDetails = React.lazy(() => import ("./pages/BlogDetails"))
+const NavBar = React.lazy(() => import ("./Components/NavBar"))
+const Home = React.lazy(() => import ("./pages/Home"))
+
 
 function App() {
   return (
     <>
     <NavBar />
-      <Routes>
+      <Suspense fallback={<Suspenses/>}>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      </Suspense>
     </>
   )
 }

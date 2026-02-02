@@ -1,8 +1,8 @@
 :root {
-  --primary: #e67e22;       /* Sophisticated Burnt Orange */
-  --secondary: #2c3e50;    /* Deep Charcoal */
-  --bg: #fdfcfb;           /* Soft Paper White */
-  --text: #1a1a1a;         /* Near Black for readability */
+  --primary: #e67e22; /* Sophisticated Burnt Orange */
+  --secondary: #2c3e50; /* Deep Charcoal */
+  --bg: #fdfcfb; /* Soft Paper White */
+  --text: #1a1a1a; /* Near Black for readability */
   --card-bg: #ffffff;
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -14,7 +14,11 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -32,7 +36,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 nav h1 {
@@ -65,7 +69,6 @@ nav a:hover {
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
-
 }
 
 .bar {
@@ -121,7 +124,7 @@ nav a:hover {
   background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -130,7 +133,7 @@ nav a:hover {
 
 .blog-div:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   border-color: var(--primary);
 }
 
@@ -170,14 +173,20 @@ nav a:hover {
   line-height: 1.8;
   color: #333;
   margin-bottom: 1.5rem;
-  font-family: 'Georgia', serif; /* Serif font for better long-form reading */
+  font-family: "Georgia", serif; /* Serif font for better long-form reading */
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
-  nav { padding: 1rem 5%; }
-  .home h1 { font-size: 3rem; }
-  .blog-container { padding: 40px 5%; }
+  nav {
+    padding: 1rem 5%;
+  }
+  .home h1 {
+    font-size: 3rem;
+  }
+  .blog-container {
+    padding: 40px 5%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -187,8 +196,8 @@ nav a:hover {
 
   .nav-links {
     position: absolute;
-    top: 70px; 
-    left: -100%; 
+    top: 70px;
+    left: -100%;
     flex-direction: column;
     background-color: #fff;
     width: 100%;
@@ -199,6 +208,31 @@ nav a:hover {
   }
 
   .nav-links.active {
-    left: 0; 
+    left: 0;
+  }
+}
+
+/* Suspense Loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-self: center;
+  margin-top: 100px;
+  box-sizing: border-box;
+
+  /* The Animation */
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
